@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Monesh K and Jeyshree S//Wedding//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:muhurtham-25062026@preethasharan2026
+DTSTAMP:20260101T000000Z
+DTSTART:20260705T020000Z
+DTEND:20260705T033000Z
+SUMMARY:Monesh K and Jeyshree S - Muhurtham (Wedding) - 5 July 2026
+DESCRIPTION:Together with our families\, we joyfully invite you to the
+  wedding of Monesh K and Jeyshree S. Muhurtham at 7:30 AM.
+LOCATION:Arunodaya Convention Hall\, #39/2\, Dairy Circle\,
+  Bannerghatta Road\, Bengaluru\, Karnataka 560029
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Monesh K and Jeyshree S wedding tomorrow
+END:VALARM
+END:VEVENT
+END:VCALENDAR
