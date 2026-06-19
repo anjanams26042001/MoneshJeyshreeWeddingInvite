@@ -1404,7 +1404,7 @@ img {
   position: absolute;
   inset: 0;
   z-index: -3;
-  background: url("../images/lastfooter.jpg") center/cover no-repeat;
+  background: url("../images/last-footer.jpg") center/cover no-repeat;
 }
 .closing-bg::after {
   color: rgba(255, 255, 255, 0.5);
