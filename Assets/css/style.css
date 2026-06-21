@@ -1630,7 +1630,7 @@ img {
   }
   /* closing: portrait footer image fills the phone/iPad screen */
   .closing {
-    min-height: 100svh;
+    min-height: 110svh;
     padding: 1.8rem 1.3rem 3rem;
     justify-content: flex-start;
   }
@@ -1777,7 +1777,7 @@ img {
 /* ---------- phone ---------- */
 @media (max-width: 600px) {
   .hero {
-    padding: calc(5rem + 100px) 1.1rem 4rem;
+    padding: calc(3rem + 100px) 1.1rem 4rem;
     align-items: flex-start;
     justify-content: center;
   }
