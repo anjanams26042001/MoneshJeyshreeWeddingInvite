@@ -1630,7 +1630,7 @@ img {
   }
   /* closing: portrait footer image fills the phone/iPad screen */
   .closing {
-    min-height: 92svh;
+    min-height: 100svh;
     padding: 1.8rem 1.3rem 3rem;
     justify-content: flex-start;
   }
