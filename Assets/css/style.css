@@ -539,9 +539,60 @@ img {
   font-size: clamp(1rem, 2.4vw, 1.35rem);
   line-height: 1.5;
   letter-spacing: 0.02em;
+  margin-bottom: 0.2rem;
+  font-weight: 700;
+}
+.hero-invite .parent-names {
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--maroon);
+  font-size: clamp(0.95rem, 2.2vw, 1.3rem); /* laptop: 1.3rem */
+  line-height: 1.5;
+  letter-spacing: 0.02em;
   margin-bottom: 1.4rem;
   font-weight: 700;
 }
+.hero-invite .parent-names .with {
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--green);
+  font-size: clamp(0.85rem, 1.8vw, 1.1rem); /* laptop: 1.1rem */
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  margin-bottom: 1.4rem;
+  font-weight: 700;
+}
+.content-divider {
+  position: relative;
+  width: 250px;
+  margin: 2px auto;
+  text-align: center;
+}
+
+.content-divider::before,
+.content-divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 42%;
+  height: 1px;
+  background: #c89b3c;
+}
+
+.content-divider::before {
+  left: 0;
+}
+
+.content-divider::after {
+  right: 0;
+}
+
+.content-divider span {
+  color: #c89b3c;
+  font-size: 26px;
+  padding: 0 12px;
+}
+
 .hero-names {
   display: flex;
   flex-direction: column;
@@ -551,7 +602,7 @@ img {
 }
 .hero-names .nm {
   font-family: var(--display);
-  font-weight: 500;
+  font-weight: 600;
   color: var(--maroon);
   font-size: clamp(3rem, 12vw, 6.4rem);
   line-height: 0.98;
@@ -629,6 +680,8 @@ img {
   place-items: center;
   text-decoration: none;
   animation: bob 2s var(--ease) infinite;
+  background: var(--cream-2);
+  color: #fff;
 }
 .scroll-cue .chev {
   width: 9px;
@@ -636,6 +689,7 @@ img {
   border-right: 1.5px solid var(--gold-d);
   border-bottom: 1.5px solid var(--gold-d);
   transform: rotate(45deg) translate(-1px, -1px);
+
 }
 @keyframes bob {
   0%,
@@ -1389,7 +1443,7 @@ img {
    ========================================================= */
 .closing {
   position: relative;
-  min-height: 84svh;
+  min-height: 100svh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1403,7 +1457,7 @@ img {
 .closing-bg {
   position: absolute;
   inset: 0;
-  z-index: -3;
+  z-index: -2;
   background: url("../images/last-footer.jpg") center/cover no-repeat;
 }
 .closing-bg::after {
@@ -1463,6 +1517,7 @@ img {
 }
 .closing-content {
   position: relative;
+  margin-bottom: 12%;
   z-index: 2;
   color: #fdf0d8;
   max-width: 680px;
@@ -1654,6 +1709,15 @@ img {
   }
 }
 /* ---------- iPad / tablet: dedicated footer + hero images ---------- */
+/* ---------- laptop / desktop: larger parent names ---------- */
+@media (min-width: 901px) {
+  .hero-invite .parent-names {
+    font-size: 1.8rem;   /* laptop */
+  }
+  .hero-invite .parent-names .with {
+    font-size: 1.5rem;   /* laptop */
+  }
+}
 @media (min-width: 601px) and (max-width: 900px) {
   .hero-bg {
     background:
@@ -1697,6 +1761,18 @@ img {
     background-size: cover;
     background-position: center top;
   }
+  .hero-invite .parent-names {
+    font-size: 1.8rem;        /* iPad */
+  }
+  .hero-invite .parent-names .with {
+    font-size: 1.5rem;     /* iPad */
+  }
+  .hero-names .nm {
+    font-size: clamp(3rem, 6vw, 2.4rem);
+  }
+  .hero-names .amp {
+    font-size: clamp(3rem, 5.4vw, 1.8rem);
+  }
 }
 /* ---------- phone ---------- */
 @media (max-width: 600px) {
@@ -1718,10 +1794,10 @@ img {
   }
   /* smaller, centred names so the full name fits a phone screen */
   .hero-names .nm {
-    font-size: clamp(1.15rem, 6vw, 2.4rem);
+    font-size: clamp(2.2rem, 6vw, 2.4rem);
   }
   .hero-names .amp {
-    font-size: clamp(1.2rem, 5.4vw, 1.8rem);
+    font-size: clamp(2.2rem, 5.4vw, 1.8rem);
   }
   /* big cards that cover most of the phone screen */
   .event-row {
@@ -1804,6 +1880,12 @@ img {
   /* phone: match the down-shift so the footer text actually moves */
   .closing {
     padding: calc(1.8rem + 80px) 1.2rem 3rem;
+  }
+  .hero-invite .parent-names {
+    font-size: 1.2rem;     /* mobile */
+  }
+  .hero-invite .parent-names .with {
+    font-size: 1rem;     /* mobile */
   }
 }
 @media (prefers-reduced-motion: reduce) {
