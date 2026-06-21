@@ -680,6 +680,8 @@ img {
   place-items: center;
   text-decoration: none;
   animation: bob 2s var(--ease) infinite;
+  background: var(--cream-2);
+  color: #fff;
 }
 .scroll-cue .chev {
   width: 9px;
@@ -687,6 +689,7 @@ img {
   border-right: 1.5px solid var(--gold-d);
   border-bottom: 1.5px solid var(--gold-d);
   transform: rotate(45deg) translate(-1px, -1px);
+
 }
 @keyframes bob {
   0%,
